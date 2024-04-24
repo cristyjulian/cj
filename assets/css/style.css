@@ -1,0 +1,82 @@
+/* General header styles */
+.main-header {
+    background: #2c3e50; /* Dark blue background */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img img {
+    height: 50px; /* Logo size */
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Menu Styles */
+.main-menu, .account-menu {
+    list-style: none;
+    padding: 200px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu li, .account-menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-menu a, .account-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover, .account-menu a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+/* Dropdown Menu Styles */
+.sub-menu {
+    display: none; /* Initially hidden */
+}
+
+.has-submenu.active .sub-menu {
+    display: block; /* Show the submenu when parent has 'active' class */
+}
+/* Mobile Menu Toggle */
+.menu-link {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .d-lg-none {
+        display: block;
+    }
+
+    .d-lg-block {
+        display: none;
+    }
+
+    
+}
+
+/* Accessibility Improvements */
+.menu-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.75); /* Focus style for accessibility */
+}
